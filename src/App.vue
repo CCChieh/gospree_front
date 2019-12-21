@@ -6,9 +6,9 @@
   </div>
 </template>
 <script>
-import Top from './components/Top.vue';
-import Main from './components/Main.vue';
-import Foot from './components/Foot.vue';
+import Top from './components/layout/Top.vue';
+import Main from './components/layout/Main.vue';
+import Foot from './components/layout/Foot.vue';
 
 export default {
   name: 'App',

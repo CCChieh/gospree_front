@@ -40,7 +40,7 @@ export default {
   .top_img {
     width: 100%;
     height: 50vh;
-    background: url(../assets/top_background_img.jpg);
+    background: url(../../assets/top_background_img.jpg);
     background-repeat: no-repeat;
     background-position: right 50%;
     background-size: cover;

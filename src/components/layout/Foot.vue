@@ -10,7 +10,8 @@ export default {
 
 <style>
   .foot {
-    width: 100vw;
+    background-color:orange;
+    width: 100%;
     height: 70px;
   }
 </style>

@@ -1,24 +1,37 @@
 <template>
   <div class="main">
-<div class="main_right" :style="mainRightStyle"><slot></slot></div>
-<div class="main_left" :style="mainLeftStyle">侧边栏</div>
+<div class="main_right" :style="mainRightStyle">
+  <slot></slot>
+  </div>
+<div class="main_left" :style="mainLeftStyle">
+  <Side></Side>
+  <Side></Side>
+  <Side></Side>
+  <Side></Side>
+  </div>
   </div>
 </template>
 
 <script>
+import Side from './Side.vue';
+
 export default {
   name: 'Main',
+  components: {
+    Side,
+  },
   data() {
     return {
       clientWidth: 0,
       mainRightMax: {
-        width: '60%',
-        maxWidth: '768px',
+        width: '65%',
+        maxWidth: '800px',
       },
       mainLeftMax: {
-        width: '30%',
-        maxWidth: '300px',
+        width: '35%',
+        maxWidth: '350px',
       },
+
       mainRightMin: {
         width: '100%',
       },
@@ -56,9 +69,5 @@ export default {
     display: flex;
     flex-wrap:wrap;
     justify-content:center;
-  }
-  .main_left,.main_right{
-    margin:20px;
-    text-align: center;
   }
 </style>
