@@ -14,6 +14,7 @@
 
 <script>
 import Side from './Side.vue';
+import note from '../../request/note';
 
 export default {
   name: 'Main',
@@ -45,6 +46,7 @@ export default {
   created() {
     window.addEventListener('resize', this.handleResize, true);
     this.handleResize();
+    note.getList(1).then((data) => { console.log(data); });
   },
   methods: {
     handleResize() {
