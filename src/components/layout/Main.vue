@@ -1,9 +1,9 @@
 <template>
   <div class="main">
-<div class="main_right" :style="mainRightStyle">
+<div class="main_left" :style="mainLeftStyle">
   <slot></slot>
   </div>
-<div class="main_left" :style="mainLeftStyle">
+<div class="main_right" :style="mainRightStyle">
   <Side></Side>
   <Side></Side>
   <Side></Side>
@@ -14,7 +14,6 @@
 
 <script>
 import Side from './Side.vue';
-import note from '../../request/note';
 
 export default {
   name: 'Main',
@@ -24,19 +23,19 @@ export default {
   data() {
     return {
       clientWidth: 0,
-      mainRightMax: {
+      mainLeftMax: {
         width: '65%',
         maxWidth: '800px',
       },
-      mainLeftMax: {
+      mainRightMax: {
         width: '35%',
         maxWidth: '350px',
       },
 
-      mainRightMin: {
+      mainLeftMin: {
         width: '100%',
       },
-      mainLeftMin: {
+      mainRightMin: {
         width: '100%',
       },
       mainRightStyle: this.mainRightMax,
@@ -46,7 +45,6 @@ export default {
   created() {
     window.addEventListener('resize', this.handleResize, true);
     this.handleResize();
-    note.getList(1).then((data) => { console.log(data); });
   },
   methods: {
     handleResize() {
@@ -71,5 +69,10 @@ export default {
     display: flex;
     flex-wrap:wrap;
     justify-content:center;
+  }
+
+  .main_right{
+    opacity: 1;
+    transition: all 1s;
   }
 </style>

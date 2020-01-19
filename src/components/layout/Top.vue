@@ -76,35 +76,9 @@ export default {
     }
   }
 
-  @-moz-keyframes top_bar-in
-
-  /* Firefox */
-    {
-    from {
-      top: -64px;
-    }
-
-    to {
-      top: 0px;
-    }
-  }
-
   @-webkit-keyframes top_bar-in
 
   /* Safari 和 Chrome */
-    {
-    from {
-      top: -64px;
-    }
-
-    to {
-      top: 0px;
-    }
-  }
-
-  @-o-keyframes top_bar-in
-
-  /* Opera */
     {
     from {
       top: -64px;

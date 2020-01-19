@@ -1,11 +1,16 @@
 <template>
   <div id="app">
     <Top></Top>
-    <Main><router-view/></Main>
+    <Main>
+      <TransRoute>
+        <router-view />
+      </TransRoute>
+    </Main>
     <Foot></Foot>
   </div>
 </template>
 <script>
+import TransRoute from './components/transition/TransRoute.vue';
 import Top from './components/layout/Top.vue';
 import Main from './components/layout/Main.vue';
 import Foot from './components/layout/Foot.vue';
@@ -16,6 +21,7 @@ export default {
     Top,
     Main,
     Foot,
+    TransRoute,
   },
 };
 </script>
@@ -25,11 +31,24 @@ export default {
     margin: 0;
     padding: 0;
     border: 0;
+    animation-name: fadein;
+    animation-duration: 1s;
   }
-  #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: #2c3e50;
+
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
   }
+
+    #app {
+      font-family: 'Avenir', Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      color: #2c3e50;
+    }
 </style>

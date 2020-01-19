@@ -1,5 +1,8 @@
 <template>
-  <div class="side">侧边栏</div>
+  <div class="side">侧边栏(关于)
+  <router-link :to="{name:'about'}">about</router-link>|
+  <router-link :to="{name:'home'}">home</router-link>
+  </div>
 </template>
 
 <script>
