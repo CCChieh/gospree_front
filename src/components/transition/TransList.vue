@@ -11,17 +11,15 @@ export default {
 </script>
 
 <style>
-  .trans_list-enter-active,
-  .trans_list-leave-active {
-    transition: all 1s;
+  .trans_list-enter-active {
+    transition: all 0.5s;
   }
 
-  .trans_list-enter,
-  .trans_list-leave-to
-
+  .trans_list-enter
   /* .fade-leave-active below version 2.1.8 */
     {
     opacity: 0;
-    transform: translateX(-60px);
+    height: 0;
+    /* transform: translateY(-60px); */
   }
 </style>

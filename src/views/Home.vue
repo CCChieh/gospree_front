@@ -3,9 +3,9 @@
     <TransList>
       <NoteList
       v-for="note in noteList"
-      :key="note.ID"
-      :title="note.Title"
-      :preView="note.PreView"></NoteList>
+      :key="note.id"
+      :title="note.title"
+      :preView="note.preView"></NoteList>
     </TransList>
     <!-- <div class="list_loading" v-if="isLoading">加载中。。。</div> -->
   </div>

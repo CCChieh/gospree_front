@@ -12,7 +12,7 @@ export default {
 
 <style>
   .trans_route-enter-active {
-    transition: all 1s;
+    transition: all 0.8s;
   }
 
   .trans_route-enter
@@ -20,5 +20,6 @@ export default {
   /* .fade-leave-active below version 2.1.8 */
     {
     opacity: 0;
+    height: 0;
   }
 </style>
