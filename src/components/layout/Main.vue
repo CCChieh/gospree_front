@@ -70,9 +70,4 @@ export default {
     flex-wrap:wrap;
     justify-content:center;
   }
-
-  .main_right{
-    opacity: 1;
-    transition: all 1s;
-  }
 </style>

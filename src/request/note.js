@@ -1,9 +1,9 @@
 import http from './http';
 
-function getList(page) {
-  return http.get('/note/list', {
+function getList(page, handle) {
+  http.get('/note/list', {
     page,
-  });
+  }).then(data => handle(data));
 }
 
 export default {

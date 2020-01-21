@@ -12,11 +12,10 @@ export default {
 
 <style>
   .trans_route-enter-active {
-    transition: all 0.8s;
+    transition: all 0.5s;
   }
 
   .trans_route-enter
-
   /* .fade-leave-active below version 2.1.8 */
     {
     opacity: 0;

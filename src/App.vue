@@ -1,26 +1,18 @@
 <template>
   <div id="app">
-    <Top></Top>
-    <Main>
       <TransRoute>
-        <router-view />
+        <keep-alive>
+          <router-view></router-view>
+        </keep-alive>
       </TransRoute>
-    </Main>
-    <Foot></Foot>
   </div>
 </template>
 <script>
 import TransRoute from './components/transition/TransRoute.vue';
-import Top from './components/layout/Top.vue';
-import Main from './components/layout/Main.vue';
-import Foot from './components/layout/Foot.vue';
 
 export default {
   name: 'App',
   components: {
-    Top,
-    Main,
-    Foot,
     TransRoute,
   },
 };
@@ -45,10 +37,26 @@ export default {
     }
   }
 
-    #app {
-      font-family: 'Avenir', Helvetica, Arial, sans-serif;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      color: #2c3e50;
-    }
+  #app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #2c3e50;
+  }
+
+  a:link {
+    text-decoration: none;
+  }
+
+  a:active {
+    text-decoration: none
+  }
+
+  a:hover {
+    color: red;
+  }
+
+  a:visited {
+    text-decoration: none;
+  }
 </style>
