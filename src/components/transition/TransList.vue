@@ -12,7 +12,7 @@ export default {
 
 <style>
   .trans_list-enter-active {
-    transition: all 0.8s;
+    transition: all 1s;
   }
 
   .trans_list-enter
@@ -20,16 +20,6 @@ export default {
   /* .fade-leave-active below version 2.1.8 */
     {
     opacity: 0;
-    /* transform: translateY(-60px); */
-  }
-
-  .trans_list-move,
-  .trans_list-enter-active {
-    transition:all 0.8s;
-  }
-
-  .trans_list-active {
-    transform: translateY(-60px);
-    position: absolute;
+    transform: translateX(-60px);
   }
 </style>

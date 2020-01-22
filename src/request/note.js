@@ -1,9 +1,10 @@
 import http from './http';
 
-function getList(page, handle) {
+function getList(page, handle, handleErr) {
   http.get('/note/list', {
     page,
-  }).then(data => handle(data));
+  }).then(handle)
+    .catch(handleErr);
 }
 
 export default {
