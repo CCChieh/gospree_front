@@ -19,9 +19,7 @@ export default {
   name: 'NoteList',
   props: ['id', 'title', 'preView', 'createdAt', 'author'],
   methods: {
-    stamp2Date(time) {
-      return tool.stamp2Date(time);
-    },
+    stamp2Date: tool.stamp2Date,
   },
 };
 </script>

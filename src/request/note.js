@@ -7,6 +7,14 @@ function getList(page, handle, handleErr) {
     .catch(handleErr);
 }
 
+function getNote(noteID, handle, handleErr) {
+  http.get('/note', {
+    noteID,
+  }).then(handle)
+    .catch(handleErr);
+}
+
 export default {
   getList,
+  getNote,
 };
