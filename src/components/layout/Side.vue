@@ -1,7 +1,8 @@
 <template>
   <div class="side">侧边栏(关于)
   <router-link :to="{name:'about'}">about</router-link>|
-  <router-link :to="{name:'home'}">home</router-link>
+  <router-link :to="{name:'home'}">home</router-link>|
+  <router-link :to="{name:'base64'}">base64</router-link>|
   </div>
 </template>
 

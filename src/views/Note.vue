@@ -39,14 +39,12 @@ export default {
   },
   beforeRouteEnter(to, from, next) {
     if (from.name) {
-      console.log('from');
       noteData.getNote(to.params.id, (data) => {
         next((vm) => {
           vm.setData(data);
         });
       });
     } else {
-      console.log('from.name');
       next();
     }
   },

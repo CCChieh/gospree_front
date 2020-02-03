@@ -1,13 +1,13 @@
 <template>
   <div class="note_list">
     <div class="note_list_title">
-      <router-link :to="{name:'note',params:{id}}"> {{title}}</router-link>
+      <router-link :to="{name:'note',params:{id}}"> {{deBase64(title)}}</router-link>
     </div>
     <div class="note_list_info">
-      {{author}}::{{stamp2Date(createdAt)}}
+      {{author}} {{stamp2Date(createdAt)}}
     </div>
     <div class="note_list_preview">
-      {{preView}}
+      {{deBase64(preView)}}
     </div>
   </div>
 </template>
@@ -20,6 +20,7 @@ export default {
   props: ['id', 'title', 'preView', 'createdAt', 'author'],
   methods: {
     stamp2Date: tool.stamp2Date,
+    deBase64: tool.deBase64,
   },
 };
 </script>
