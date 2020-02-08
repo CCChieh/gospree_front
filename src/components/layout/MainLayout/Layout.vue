@@ -1,10 +1,10 @@
 <template>
   <div class="norm_lay">
-    <Top></Top>
+    <Top/>
     <Main>
-         <slot></slot>
+      <slot/>
     </Main>
-    <Foot></Foot>
+    <Foot/>
   </div>
 </template>
 

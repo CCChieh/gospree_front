@@ -1,25 +1,14 @@
 <template>
   <div class="main">
-<div class="main_left" :style="mainLeftStyle">
-  <slot></slot>
-  </div>
-<div class="main_right" :style="mainRightStyle">
-  <Side></Side>
-  <Side></Side>
-  <Side></Side>
-  <Side></Side>
-  </div>
+    <slot/>
   </div>
 </template>
 
 <script>
-import Side from './Side.vue';
 
 export default {
   name: 'Main',
-  components: {
-    Side,
-  },
+  components: {},
   data() {
     return {
       clientWidth: 0,
@@ -62,12 +51,12 @@ export default {
 </script>
 
 <style>
-  .main{
+  .main {
     margin: 0;
     width: 100%;
     padding: 0;
     display: flex;
-    flex-wrap:wrap;
-    justify-content:center;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 </style>

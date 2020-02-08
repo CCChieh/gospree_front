@@ -12,7 +12,7 @@ export default {
 
 <style>
   .trans_route-enter-active {
-    transition: all 0.5s;
+    transition: all 0.3s;
   }
 
   .trans_route-enter

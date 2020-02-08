@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-      <TransRoute>
-        <keep-alive>
-          <router-view :key="$route.fullPath"></router-view>
-        </keep-alive>
-      </TransRoute>
+    <TransRoute>
+      <keep-alive>
+        <router-view :key="$route.fullPath"/>
+      </keep-alive>
+    </TransRoute>
   </div>
 </template>
 <script>
@@ -44,19 +44,12 @@ export default {
     color: #2c3e50;
   }
 
-  a:link {
-    text-decoration: none;
-  }
-
-  a:active {
+  a:link, a:active, a:hover, a:visited {
+    color: #767579;
     text-decoration: none
   }
 
   a:hover {
     color: red;
-  }
-
-  a:visited {
-    text-decoration: none;
   }
 </style>

@@ -1,28 +1,28 @@
 <template>
-  <NormLay>
+  <Layout>
     <TransList>
       <NoteList
-      v-for="note in noteList"
-      :key="note.id"
-      :id="note.id"
-      :createdAt="note.createdAt"
-      :title="note.title"
-      :preView="note.preView"
-      :author="note.author"
-      ></NoteList>
+        v-for="note in noteList"
+        :key="note.id"
+        :id="note.id"
+        :createdAt="note.createdAt"
+        :title="note.title"
+        :preView="note.preView"
+        :author="note.author"
+      />
     </TransList>
-    <MoreNoteList :addData="addNoteList" :more="more"></MoreNoteList>
+    <MoreNoteList :addData="addNoteList" :more="more"/>
     <!-- <div class="list_loading" v-if="isLoading">加载中。。。</div> -->
-  </NormLay>
+  </Layout>
 </template>
 
 <script>
 // @ is an alias to /src
-import NoteList from '../components/note/NoteList.vue';
+import NoteList from '../components/note/List.vue';
 import noteData from '../request/note';
 import TransList from '../components/transition/TransList.vue';
-import NormLay from '../components/layout/NormLay.vue';
-import MoreNoteList from '../components/note/MoreNoteList.vue';
+import Layout from '../components/layout/MainLayout/Layout.vue';
+import MoreNoteList from '../components/note/MoreList.vue';
 
 export default {
   name: 'home',
@@ -30,7 +30,7 @@ export default {
     NoteList,
     MoreNoteList,
     TransList,
-    NormLay,
+    Layout,
   },
   data() {
     return {
@@ -64,7 +64,13 @@ export default {
         });
       });
     } else {
-      next();
+      // next();
+      // 下面是暂时使用
+      noteData.getList(1, (data) => {
+        next((vm) => {
+          vm.setData(data);
+        });
+      });
     }
   },
 };

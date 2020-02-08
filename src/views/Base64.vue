@@ -1,15 +1,15 @@
 <template>
-  <NormLay>
+  <Layout>
     <textarea rows="15" cols="100" v-model="content"/>
     <hr />
     <textarea rows="15" cols="100" v-model="enBase64" readonly="readonly"/>
     <hr />
     <textarea rows="15" cols="100" v-model="deBase64" readonly="readonly"/>
-  </NormLay>
+  </Layout>
 </template>
 
 <script>
-import NormLay from '../components/layout/NormLay.vue';
+import Layout from '../components/layout/MainLayout/Layout.vue';
 import tool from '../util/tool';
 
 export default {
@@ -20,7 +20,7 @@ export default {
   },
   name: 'base64',
   components: {
-    NormLay,
+    Layout,
   },
   computed: {
     enBase64() {

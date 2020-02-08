@@ -9,8 +9,11 @@
   },
   "dependencies": {
     "axios": "^0.19.1",
+    "codemirror": "^5.51.0",
     "core-js": "^3.4.3",
     "element-ui": "^2.13.0",
+    "highlight": "^0.2.4",
+    "tui-editor": "^1.4.10",
     "vue": "^2.6.10",
     "vue-markdown": "^2.2.4",
     "vue-navigation": "^1.1.4",
